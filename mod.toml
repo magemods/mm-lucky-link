@@ -5,27 +5,28 @@
 
 # Unique ID of this mod. Pick something long enough that it'll never be the same as any other mod.
 # The name displayed in the mod management menu is separate from this so this doesn't need to be human readable.
-id = "mm_recomp_mod_template"
+id = "magemods_lucky_link"
 
 # Version of this mod.
 version = "1.0.0"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
-display_name = "Always Spin Attack"
+display_name = "Lucky Link"
 
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
-This is an example mod for Majora's Mask: Recompiled that can be used as a template for creating mods. \
-When this mod is enabled, you will always perform a quickspin when swinging your sword.
-
-For more details, see https://github.com/Zelda64Recomp/MMRecompModTemplate."""
+Suddenly Link seems to have pretty good luck, winning every minigame from Doggy Racetrack to Dampé's digging game!
+"""
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
 # to prevent it from being cut off due to the limited space.
-short_description = "Always perform a quickspin when swinging your sword."
+short_description = "Link gets lucky in every minigame he plays!"
+
+# Website URL for Thunderstore
+website_url = "https://github.com/magemods/mm-lucky-link"
 
 # Authors of this mod.
-authors = [ "Your name here" ]
+authors = [ "magemods" ]
 
 # ID of the target recomp game.
 game_id = "mm"
@@ -35,14 +36,10 @@ minimum_recomp_version = "1.2.0"
 
 # Dependency mods. Each entry is the mod's ID and then an optional minimum version of the dependency mod.
 dependencies = [
-# Example dependency:
-#    "modname:1.0.0"
 ]
 
 # Native libraries (e.g. DLLs) and the functions they export.
 native_libraries = [
-# Example native library:
-#    { name = "my_native_library", funcs = ["my_native_library_function"] }
 ]
 
 # Inputs to the mod tool.
@@ -52,38 +49,77 @@ native_libraries = [
 elf_path = "build/mod.elf"
 
 # Output mod filename.
-mod_filename = "mm_recomp_mod_template"
+mod_filename = "magemods_lucky_link"
 
 # Reference symbol files.
 func_reference_syms_file = "Zelda64RecompSyms/mm.us.rev1.syms.toml"
 data_reference_syms_files = [ "Zelda64RecompSyms/mm.us.rev1.datasyms.toml", "Zelda64RecompSyms/mm.us.rev1.datasyms_static.toml" ]
 
 # Additional files to include in the mod.
-additional_files = [ ]
+additional_files = [
+    "thumb.dds"
+]
 
 [[manifest.config_options]]
-id = "enum_option"
-name = "Enum Option"
-description = "Test enum config option"
+id = "lucky_bombers"
+name = "Lucky Bombers Code"
+description = "Somehow the Bombers code is always 1-2-3-4-5. What are the odds of that? Also the Bomber guard seems to accept any code. Maybe he forgot what it was?"
 type = "Enum"
-options = [ "First", "Second" ]
-default = "First"
+options = [ "Yes", "No" ]
+default = "Yes"
 
 [[manifest.config_options]]
-id = "number_option"
-name = "Number Option"
-description = "Test number config option."
-type = "Number"
-min = 0
-max = 10
-step = 0.1
-precision = 1
-percent = false
-default = 1
+id = "lucky_dampe"
+name = "Lucky Dampé"
+description = "Somehow Dampé always digs a flame even in dirt patches where you thought there wasn't one. Maybe Dampé is just tired of taking the elevator?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
 
 [[manifest.config_options]]
-id = "string_option"
-name = "String Option"
-description = "Test string config option."
-type = "String"
-default = "Lorem Ipsum"
+id = "lucky_dograce"
+name = "Lucky Doggy Racetrack"
+description = "Ruff! Somehow your dog always feels unstoppable. What's Mamamu Yan feeding these dogs anyway?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
+
+[[manifest.config_options]]
+id = "lucky_goronrace"
+name = "Lucky Goron Race"
+description = "Somehow you never get hit by other gorons and they seem a bit slower. Maybe they're just afraid to win against Darmani?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
+
+[[manifest.config_options]]
+id = "lucky_fish2"
+name = "Lucky Marine Research Lab"
+description = "Somehow one fish always catches the food. Maybe one's just hungrier than the other?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
+
+[[manifest.config_options]]
+id = "lucky_spiderhouse"
+name = "Lucky Ocean Spider House Masks"
+description = "Somehow you always shoot the masks in the correct order. Maybe the Stalchildren just aren't very good at creating locks?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
+
+[[manifest.config_options]]
+id = "lucky_chestgame"
+name = "Lucky Treasure Chest Shop"
+description = "Somehow the maze always seems easy. Did the Treasure Chest Shop Gal rig it for you?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
+
+[[manifest.config_options]]
+id = "lucky_lottery"
+name = "Lucky Lottery Shop"
+description = "Somehow you always win the lottery. Does Termina have Vegas?"
+type = "Enum"
+options = [ "Yes", "No" ]
+default = "Yes"
