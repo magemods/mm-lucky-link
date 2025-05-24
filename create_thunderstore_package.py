@@ -5,6 +5,7 @@ import build_mod as bm
 
 package_dir = bm.project_root.joinpath("thunderstore_package")
 
+deps = bnt.deps = bnt.deps
 
 def slugify(text: str) -> str:
     text = text.strip()
@@ -13,8 +14,11 @@ def slugify(text: str) -> str:
     return text
 
 
-def strip_newlines(text: str) -> str:
-    return re.sub(r'[\n]+', ' ', text).strip()
+def get_description() -> str:
+    description = re.sub(r'[\n]+', ' ', bm.mod_data["manifest"]["description"]).strip()
+    if len(description) > 0 and len(description) <= 256:
+        return description
+    return bm.mod_data["manifest"]["short_description"]
 
 
 def get_website_url() -> str:
@@ -46,7 +50,7 @@ def get_package_manifest() ->dict[str, str]:
         "name":  slugify(bm.mod_data["manifest"]["display_name"]),
         "version_number":  bm.mod_data["manifest"]["version"],
         "website_url":  get_website_url(),
-        "description":  strip_newlines(bm.mod_data["manifest"]["description"]),
+        "description":  get_description(),
         "dependencies":  []
     }
 
@@ -97,7 +101,6 @@ def copy_mod(src_path: Path, dst_path: Path) -> bool:
         print(f"No file '{src_path}' exists. You need to build the mod first.")
         return False
 
-
 def create_archive(package_dir: Path, dst_path: Path):
     new_zip = zipfile.ZipFile(dst_path, 'w')
 
@@ -108,7 +111,6 @@ def create_archive(package_dir: Path, dst_path: Path):
         new_zip.write(src_path, i)
 
     new_zip.close()
-
 
 def create_package():
     bm.run_build()
