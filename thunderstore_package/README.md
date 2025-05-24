@@ -2,6 +2,8 @@
 
 Suddenly Link seems to have pretty good luck, winning every minigame from Doggy Racetrack to Dampé's digging game!
 
+Huge thanks to [Reonu](https://thunderstore.io/c/zelda-64-recompiled/p/Reonu/) for the custom slot machine model!
+
 ## Features
 ### Lucky Bombers Code
 ![](https://github.com/magemods/mm-lucky-link/blob/main/thunderstore_package/images/lucky-bombers.jpg?raw=true)

@@ -8,7 +8,7 @@
 id = "magemods_lucky_link"
 
 # Version of this mod.
-version = "1.0.0"
+version = "1.0.1"
 
 # The name that will show up for this mod in the mod menu. This should be human readable.
 display_name = "Lucky Link"
@@ -16,6 +16,8 @@ display_name = "Lucky Link"
 # The description that will show up when this mod is displayed in the mod menu. This should be human readable.
 description =  """
 Suddenly Link seems to have pretty good luck, winning every minigame from Doggy Racetrack to Dampé's digging game!
+
+Huge thanks to Reonu for the custom slot machine model!
 """
 
 # A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
