@@ -37,8 +37,5 @@ RECOMP_HOOK("EnKujiya_UnsetBoughtTicket") void on_EnKujiya_UnsetBoughtTicket() {
 }
 
 RECOMP_HOOK("EnKujiya_GivePrize") void on_EnKujiya_GivePrize() {
-    if (!get_config_bool("lucky_lottery")) {
-        return;
-    }
     restore_lottery_code();
 }

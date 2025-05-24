@@ -41,8 +41,5 @@ RECOMP_HOOK("BgKin2Fence_HandleMaskCode") void on_BgKin2Fence_HandleMaskCode(BgK
 }
 
 RECOMP_HOOK_RETURN("BgKin2Fence_HandleMaskCode") void after_BgKin2Fence_HandleMaskCode() {
-    if (!get_config_bool("lucky_spiderhouse")) {
-        return;
-    }
     restore_mask_order();
 }

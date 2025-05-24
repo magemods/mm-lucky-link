@@ -37,9 +37,6 @@ RECOMP_HOOK("func_809C4BC4") void on_func_809C4BC4() {
 }
 
 RECOMP_HOOK("Message_BombersNotebookQueueEvent") void on_Message_BombersNotebookQueueEvent(int, u8 event) {
-    if (!get_config_bool("lucky_bombers")) {
-        return;
-    }
     if (event != BOMBERS_NOTEBOOK_EVENT_LEARNED_SECRET_CODE) {
         return;
     }
